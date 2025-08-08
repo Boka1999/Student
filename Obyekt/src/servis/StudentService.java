@@ -3,7 +3,7 @@ package servis;
 import model.Student;
 
 public class StudentService {
-    public Student create (String name, String surname, int year, double mark, String gender, boolean PHD ) {
+    public Student create (String name, String surname, int year, double mark, char gender, boolean PHD ) {
         Student student = new Student();
         student.setName(name);
         student.setSurname(surname);
@@ -29,19 +29,15 @@ public class StudentService {
     }
     public void GirlStudents (Student [] students){
         for ( Student student : students) {
-            if (student.getGender() == "F")
+            if (student.getGender() == 'F')
                 student.printinfo();
 
         }
     }
-    public void MinGirl (Student[] students) {
-        for (int i = 0; i <students.length ; i++) {
-          int s = 0;
-          int MinGirl;
-            if (students[i].getGender() == "F" && students[i].getYear() > s  )
-               s = students[i].getYear();
-            // students.printinfo;
-            }
-        }
+
+
+
+
 }
+
 

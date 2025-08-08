@@ -1,6 +1,4 @@
 package model;
-import model.Student;
-
 
 
 public class Student {
@@ -8,7 +6,7 @@ public class Student {
    private String surname;
    private int year;
    private double mark;
-   private String gender;
+   private char gender;
    private boolean PHD;
 
     public String getName() {
@@ -43,11 +41,11 @@ public class Student {
         this.mark = mark;
     }
 
-    public String getGender() {
+    public char getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(char gender) {
         this.gender = gender;
     }
 
@@ -66,6 +64,9 @@ public class Student {
     public void print(){
         System.out.println(name + " " + surname);
     }
+
+
+
     public void printinfo(){
 
         System.out.println("***********************");
@@ -75,6 +76,7 @@ public class Student {
         System.out.println("Mark:"+ " " + mark);
         System.out.println("Gender"+ " " + gender);
         System.out.println("PHD:" + " " + PHD);
+
 
     }
 
