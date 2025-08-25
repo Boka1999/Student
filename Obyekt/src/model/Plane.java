@@ -33,7 +33,9 @@ public class Plane {
     }
 
     public void setYear(int year) {
-        this.year = year;
+        if (year >= 1903 && year <= 2021 ) {
+            this.year = year;
+        }
     }
 
     public int getHours() {
@@ -41,7 +43,8 @@ public class Plane {
     }
 
     public void setHours(int hours) {
-        this.hours = hours;
+        if (hours >= 0 && hours <= 10000){
+        this.hours = hours;}
     }
 
     public boolean isMilitary() {
@@ -57,7 +60,8 @@ public class Plane {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        if (weight >= 10000 && weight <= 160000){
+        this.weight = weight;}
     }
 
     public int getWingspan() {
@@ -65,7 +69,8 @@ public class Plane {
     }
 
     public void setWingspan(int wingspan) {
-        this.wingspan = wingspan;
+        if (wingspan >= 10 && wingspan <= 45){
+        this.wingspan = wingspan;}
     }
 
     public int getTopSpeed() {
@@ -73,7 +78,8 @@ public class Plane {
     }
 
     public void setTopSpeed(int topSpeed) {
-        this.topSpeed = topSpeed;
+        if (topSpeed >= 0){
+        this.topSpeed = topSpeed;}
     }
 
     public int getSeats() {
@@ -81,7 +87,8 @@ public class Plane {
     }
 
     public void setSeats(int seats) {
-        this.seats = seats;
+        if (seats >= 0){
+        this.seats = seats;}
     }
 
     public double getCost() {
@@ -89,7 +96,8 @@ public class Plane {
     }
 
     public void setCost(double cost) {
-        this.cost = cost;
+        if (cost >= 0){
+        this.cost = cost;}
     }
     public void  printInfo (){
         System.out.println("Model" + " " + model);
@@ -100,6 +108,9 @@ public class Plane {
         System.out.println("Weigth" + " " + weight);
         System.out.println( "Wingspan" + " "+ wingspan);
         System.out.println("TopSprd" + " " + topSpeed);
+        System.out.println("Seats" + " "+ seats);
+        System.out.println("Cost" + " " + cost);
+
     }
     public Plane create (String model, String country, int year, int hours, boolean military, int weight, int wingspan, int topSpeed, int seats,double cost) {
         Plane plane = new Plane();
